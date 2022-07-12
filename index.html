@@ -35,7 +35,8 @@ class: center, middle
 # QR Code reader in NS
 
     - Network Survey 1.7.0 released and available on the Google Play Store
-    - New feature allows for the MQTT connection settings to be scanned from a QR code instead of manually typed into multiple phones
+    - New feature allows for the MQTT connection settings to be scanned from a QR code 
+      instead of manually typed into multiple phones
 
 <img src="broker_connection_settings.jpg" width="100">
 <img src="qr_code_reader.jpg" width="100">
@@ -75,7 +76,8 @@ class: center, middle
 # phone-state-monitor analytic falls behind in processing messages
       
       - Issue seems to be caused by the current configuration of the MQTT eventhub
-      - Need more TUs (Throughtput Units) to allow more parralelized processing of messages across all MQTT topics
+      - Need more TUs (Throughtput Units) to allow more parralelized processing of messages 
+      across all MQTT topics
       - Need more partitions on each of the topics
       - Making above changes requires a redeployment of existing eventhubs instance
 
