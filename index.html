@@ -21,39 +21,50 @@
 
 class: center, middle
 
-# Your Workflow & the GitHub Platform
-
-???
-
-Notes for the _first_ slide!
-
----
-
 # Agenda
 
-1. Introduction
-2. Survey of tools and needs
-3. Looking for automation
-4. Creating an accessible and secure workflow
+    1. Network Survey QR code reader
+    2. QR code auto-gen on DFP Reveal apps page
+    3. Alert count and graph on DFP Reveal page
+    4. Surveys count on DFP Reveal map
+    5. Photo Monkey location tag regardless of description
+    6. Update on the phone-state-monitor falling behind issue
 
 ---
 
-# Introduction
+# QR Code reader in NS
 
-      It's possible to embed images.
-![](https://cdn.shopify.com/s/files/1/0051/4802/products/mona-1_large.jpg?v=1511308586)
-
----
-
-# Survey of tools and needs
+    - Network Survey 1.7.0 released and available on the Google Play Store
+    - New feature allows for the MQTT connection settings to be scanned from a QR code instead of manually typed into multiple phones
 
 ---
 
-# Looking for automation
+# QR Code on DFP Reveal
+      
+      - New microservice exposing an API for getting MQTT broker settings
+      - QR Code for Network Survey on the Apps page in DFP REveal
 
 ---
 
-# Creating an accessible and secure workflow
+# Alert count on DFP Reveal
+      
+      - New graph on DFP Reveal showing current and historical DFP alert counts
+
+---
+
+# Photo Monkey 0.2.6
+      
+      - New release available on the Google Play Store
+      - Addresses the issue with missing location in EXIF data for photos without descriptions
+      
+---
+    
+# phone-state-monitor analytic falls behind in processing messages
+      
+      - Issue seems to be caused by the current configuration of the MQTT eventhub
+      - Need more TUs (Throughtput Units) to allow more parralelized processing of messages across all MQTT topics
+      - Need more partitions on each of the topics
+      - Making above changes requires a redeployment of existing eventhubs instance
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
