@@ -23,76 +23,43 @@ class: center, middle
 
 # Agenda
 
-  1. Network Survey QR code reader
-  2. QR code auto-gen on DFP Reveal apps page
-  3. Alert count and graph on DFP Reveal page
-  4. Surveys count on DFP Reveal map
-  5. Photo Monkey 0.2.6 location tag regardless of description
-  6. Photo Monkey image resizing
-  7. Update on the phone-state-monitor falling behind issue
+  1. Survey counts on Exploration page in DFP Reveal
+  2. Alerts and Activity summary map
+  3. Device status map with latest positions
+  4. Gauge showing the number of devices over the last 24 hours
 
 ---
 
-# QR Code reader in NS
+# Survey Counts
 
-    - Network Survey 1.7.0 released and available on the Google Play Store
-    - New feature allows for the MQTT connection settings to be scanned from a QR code 
-      instead of manually typed into multiple phones
+    - Exploration Map shows an observations count for each hexagonal sector
 
-<center>
-<img src="broker_connection_settings.jpg" width="100">
-<img src="qr_code_reader.jpg" width="100">
-</center>      
 ---
 
-# QR Code on DFP Reveal
+# Summary Map
       
-      - New microservice exposing an API for getting MQTT broker settings
-      - QR Code for Network Survey on the Apps page in DFP Reveal
+      - New map shows a summary of received alert and the latest activity
    
-<center><img src="qr_code_reveal.JPG" width="400"></center>
-
 ---
 
-# Alert count on DFP Reveal
+# Device locations
       
-      - New graph on DFP Reveal showing current and historical DFP alert counts
-
-<center><img src="alerts_reveal.JPG" width="400"></center>
+      - New map showing the latest positions
 ---
    
-# Survey count on DFP Reveal
-      - New map on DFP Reveal showing a count of surveys on a map
+# Device count
 
+      - New gauge showing the number of connected devices inthe last 24 hours
 
-<center><img src="surveys_reveal.JPG" width="400"></center>
       
 ---
 
-# Photo Monkey 0.2.6
+# Photo Monkey 0.2.7
       
       - New release available on the Google Play Store
-      - Addresses the issue with missing location in EXIF data for photos without descriptions
+      - Allows selecting different image sizes for photos sent to the Rest API
       
 ---
-
-# Photo Monkey image resizing
-      
-      - Image resizing in Photo Monkey
-      
-<center><img src="photo-resize-ui.png" width="200"> 
-<img src="photo-resize-ui-expanded.png" width="200">
-<img src="photo-resize-toast.png" width="200"></center>
----
-    
-# phone-state-monitor analytic falls behind in processing messages
-      
-      - Issue seems to be caused by the current configuration of the MQTT eventhub
-      - Need more TUs (Throughtput Units) to allow more parralelized processing of messages 
-      across all MQTT topics
-      - Need more partitions on each of the topics
-      - Making above changes requires a redeployment of existing eventhubs instance
-
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
     </script>
